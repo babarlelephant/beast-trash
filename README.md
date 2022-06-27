@@ -25,8 +25,7 @@ Then the relevant code computing the likelihood of the observed epidemic curve g
 			double date = datesInput.get().getArrayValue(j);
 			
 			double dt = t0 - date;
-			//double popSize = popsizeFunction.getPopSize(dt);
-			double popSize = getPopSize(dt);
+			double popSize = getPopSize(dt); // calls the method of the Coalescent or BayesianSkyline object
 			double modeledCovariate = popSize * alpha; 
 			double normalizedDiff = Math.abs(cases - modeledCovariate*ascertainmentRate) / Math.sqrt(modeledCovariate) / sigma;
 			// normalizedDiff follows approximately a standard normal law
