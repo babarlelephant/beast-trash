@@ -10,7 +10,8 @@ The new populationPrior class is called with
 				 coalescentPopulationModel="@CoalescentExponential.t:alignment"
 				 > <!-- you can replace coalescentPopulationModel=".." by skyline="..." if you are using skyline -->
 				</distribution>
-</distribution>```
+</distribution>
+```
 
 Cases and dates are the early SARS-CoV-2 epidemic curve
 
@@ -18,7 +19,8 @@ Cases and dates are the early SARS-CoV-2 epidemic curve
 Then the relevant code computing the likelihood of the observed epidemic curve given the coalescent population curve is  
 
 
-```double alpha = 365.0/5.0/5.0;// alphaInput.get().getArrayValue();
+```
+		double alpha = 365.0/5.0/5.0;// alphaInput.get().getArrayValue();
 		
 		for (int j = 0; j < casesInput.get().getDimension() ; j++) { // we consider the epidemic curve only From Dec 1 to Jan 11
 			double cases = casesInput.get().getArrayValue(j);
@@ -31,4 +33,5 @@ Then the relevant code computing the likelihood of the observed epidemic curve g
 			// normalizedDiff follows approximately a standard normal law
 			logL -= normalizedDiff * 2 / Math.sqrt(2*Math.PI); // 1st order approximation
 		}				
-		return logL;```
+		return logL;
+```
