@@ -13,7 +13,7 @@ The new populationPrior class is called with
 				</distribution>
 </distribution>```
 
-Cases and dates are the epidemic curve of early SARS-CoV-2
+Cases and dates are the early SARS-CoV-2 epidemic curve
 
 
 Then the relevant code computing the likelihood of the observed epidemic curve given the coalescent population curve is  
