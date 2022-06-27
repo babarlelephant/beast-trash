@@ -22,7 +22,7 @@ Then the relevant code computing the likelihood of the observed epidemic curve g
 ```
 		double alpha = 365.0/5.0/5.0;// alphaInput.get().getArrayValue();
 		
-		for (int j = 0; j < casesInput.get().getDimension() ; j++) { // we consider the epidemic curve only From Dec 1 to Jan 11
+		for (int j = 0; j < casesInput.get().getDimension() ; j++) { 
 			double cases = casesInput.get().getArrayValue(j);
 			double date = datesInput.get().getArrayValue(j);
 			
